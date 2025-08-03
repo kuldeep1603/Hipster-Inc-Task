@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+#  Hipster Inc - Multi-Theme Product Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application with **dynamic theme switching** (Light, Dark, Colorful), built using **React.js**, **TypeScript**, **Tailwind CSS**, and **Redux Toolkit**. It features multiple pages (Home, About, Contact), dynamic theme-based layouts (with/without sidebar), reusable components, and smooth UI.
 
-Currently, two official plugins are available:
+🔗 Live Preview: https://hipster-inc-kuldeep-task.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ React JS + TypeScript
+- 🎨 Tailwind CSS
+- ⚙️ Redux Toolkit (for state management)
+- 📁 File-based routing (via React Router)
+- 📦 Netlify (deployment)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🧩 Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ✅ **3 Fully Functional Themes**
+  - Light: Minimal layout with header and cards
+  - Dark: Includes a sidebar and dark styles
+  - Colorful: Vibrant layout with animations
+- 📚 **Reusable Components** (Header, Card, Layout, Skeleton, Sidebar)
+- 🗺️ **Multi-Page Setup**: Home, About, Contact
+- 🎛️ **Redux-based Global Theme Switching**
+- 📱 Fully Responsive & Accessible Design
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Folder Structure
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+src/
+├── components/ # UI components
+│ ├── CardSkeleton.tsx
+│ ├── Header.tsx
+│ ├── Heading.tsx
+│ ├── Layout.tsx
+│ ├── ProductCard.tsx
+│ └── Sidebar.tsx
+│
+├── pages/ # Pages (route-based)
+│ ├── Home.tsx
+│ ├── About.tsx
+│ └── Contact.tsx
+│
+├── redux/ # Redux Toolkit slices
+│ ├── slices/
+│ │ ├── productSlice.ts
+│ │ └── themeSlice.ts
+│ └── store.ts
+│
+├── utils/ # Utility files
+│ └── themeClasses.ts # Theme-based class config
+│
+├── App.tsx
+└── main.tsx
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone the Repository
+
+git clone https://github.com/kuldeep1603/Hipster-Inc-Task/
+cd multi-theme-switcher
+npm install
+npm run dev
+
+
+📸 Screenshots
+Light Theme	Dark Theme	Colorful Theme
+
+<img width="1349" height="604" alt="image" src="https://github.com/user-attachments/assets/6e64d586-01a4-41dd-820e-3ee7a5970111" />
+<img width="1343" height="574" alt="image" src="https://github.com/user-attachments/assets/334b27c0-2dbe-42e8-ae4b-ad9dea6fbd94" />
+<img width="1335" height="593" alt="image" src="https://github.com/user-attachments/assets/11c008f8-5403-4b10-b46d-495504a891da" />
+
+
+
